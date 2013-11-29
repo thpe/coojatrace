@@ -118,7 +118,7 @@ trait DestinationGeneratorComponent { this: GeneratorWindow =>
     // create new option panel for this generator
     val panel = new JPanel(new GridLayout(0, 2))
     
-    // add option -> value GUI components
+    // add option -> value Cooja components
     for((option, value) <- options) {
       val label = new JLabel(option)
       val textField = new JTextField(value)
