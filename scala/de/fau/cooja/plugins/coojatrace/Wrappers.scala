@@ -466,7 +466,7 @@ object RichRadioMedium {
 case class LogMessage(mote: Mote, message: String)
 
 /**
- * (Cooja) Log wrapper.
+ * (GUI) Log wrapper.
  */
 class RichLog(val simulation: Simulation) {
   /**

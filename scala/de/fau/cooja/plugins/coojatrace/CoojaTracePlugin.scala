@@ -59,7 +59,7 @@ import scala.actors.Futures._
  * The CoojaTrace Cooja-Plugin.
  * 
  * Creates a scala interpreter and runs the test script to initialize rules, operators and signals
- * of the CoojaTrace framework. Can be run without Cooja.
+ * of the CoojaTrace framework. Can be run without GUI.
  *
  * @author Florian Lukas [[mailto:florian.lukas@e-technik.stud.uni-erlangen.de]]
  */
@@ -120,7 +120,7 @@ class CoojaTracePlugin(val sim: Simulation, val gui: Cooja) extends VisPlugin("C
 
   
   // Constructor:
-  // create Swing elements if run with Cooja
+  // create Swing elements if run with GUI
   if(Cooja.isVisualized) createCooja()
   // prepare interpreter
   prepareInterpreter()
@@ -149,7 +149,7 @@ class CoojaTracePlugin(val sim: Simulation, val gui: Cooja) extends VisPlugin("C
   private lazy val generatorWindow = new GeneratorWindow(this)
   
   /**
-   * Create Swing elements for plugin Cooja.
+   * Create Swing elements for plugin GUI.
    */
   private def createCooja() {
     // add run/reset button handler
